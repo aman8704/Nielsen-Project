@@ -26,6 +26,9 @@ A BMTC-style conductor ticketing demo app built with Kotlin and Android Jetpack.
 
 ## Project Structure
 
+<img width="1000" height="1500" alt="image" src="https://github.com/user-attachments/assets/33003908-1951-4030-b4fd-c940986f988f" />
+
+
 ```text
 .
 ├── app/
