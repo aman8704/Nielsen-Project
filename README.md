@@ -92,6 +92,3 @@ A BMTC-style conductor ticketing demo app built with Kotlin and Android Jetpack.
 - GPS logic detects the nearest stop to estimate the boarding/source location.
 - The app is a frontend/demo flow meant for UI simulation and conductor experience prototyping.
 
-## License
-
-This project is for educational and demo purposes.
