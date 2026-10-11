@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#F59E0B</color>
+    <color name="primary_dark">#D97706</color>
+    <color name="background_dark">#F3F6FB</color>
+    <color name="surface_dark">#FFFFFF</color>
+    <color name="surface_light">#EAF0F7</color>
+    <color name="text_primary">#111827</color>
+    <color name="text_secondary">#4B5563</color>
+    <color name="text_inverse">#FFFFFF</color>
+    <color name="success">#16A34A</color>
+    <color name="error">#EF4444</color>
+    <color name="tile_default">#EEF2FF</color>
+    <color name="tile_pressed">#DDE7FF</color>
+</resources>

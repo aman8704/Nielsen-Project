@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/shiftStartFragment">
+
+    <fragment
+        android:id="@+id/shiftStartFragment"
+        android:name="com.aman.conductorcompanion.ui.shift.ShiftStartFragment"
+        android:label="Start Shift"
+        tools:layout="@layout/fragment_shift_start">
+        <action
+            android:id="@+id/action_start_to_ticket"
+            app:destination="@id/ticketFragment"
+            app:popUpTo="@id/shiftStartFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.aman.conductorcompanion.ui.ticket.TicketFragment"
+        android:label="Tickets"
+        tools:layout="@layout/fragment_ticket" />
+</navigation>

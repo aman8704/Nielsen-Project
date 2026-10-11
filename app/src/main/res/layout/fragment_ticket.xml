@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:keepScreenOn="true">
+
+    <!-- Glance Strip (Top 20%) -->
+    <LinearLayout
+        android:id="@+id/glanceStrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium"
+        android:background="@color/surface_dark"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvRoute"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                tools:text="500D" />
+            <TextView
+                android:id="@+id/tvSyncBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:textColor="@color/background_dark"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="2 Pending"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvCurrentStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_body"
+            tools:text="Current: Marathahalli" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bookingReceiptCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/spacing_medium"
+        android:background="@color/surface_dark"
+        android:padding="@dimen/spacing_medium"
+        app:layout_constraintTop_toBottomOf="@id/glanceStrip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Receipt"
+            android:textAllCaps="true"
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etConductorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="Aman Kumar"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:hint="Conductor Name" />
+
+                <EditText
+                    android:id="@+id/etBusNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/transparent"
+                    android:text="KA 32 AB 2001"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp"
+                    android:hint="Bus Number" />
+
+                <TextView
+                    android:id="@+id/tvSourceDestination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Hebbal → BTM Layout"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvBookingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Booking Time: Today, 08:15 AM"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivQrCode"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginStart="12dp"
+                android:background="@color/surface_light"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:contentDescription="QR code preview" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Payment Details"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPaymentDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Paid via UPI • ₹260"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Voice Assistance"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchVoiceAssistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Destinations Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDestinations"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/spacing_small"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintTop_toBottomOf="@id/bookingReceiptCard"
+        app:layout_constraintBottom_toTopOf="@id/thumbZone"
+        tools:listitem="@layout/item_stop"/>
+
+    <!-- Thumb Zone (Bottom 40%) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/thumbZone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_dark"
+        android:padding="@dimen/spacing_medium"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/togglePassengers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true"
+            app:checkedButton="@id/btnPass1"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPass1"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="1" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPass2"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="2" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPass3"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="3" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPass4"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="4+" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!-- Passenger Type -->
+        <HorizontalScrollView
+            android:id="@+id/scrollTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/togglePassengers">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:checkedChip="@id/chipAdult">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAdult"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:text="Adult" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipChild"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:text="Child (50%)" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSenior"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:text="Senior (50%)" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPass"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:text="Pass" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tvTotalFare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:textAppearance="?attr/textAppearanceHeadlineLarge"
+            app:layout_constraintTop_toBottomOf="@id/scrollTypes"
+            tools:text="₹75" />
+
+        <!-- Custom Hold to issue container to support progress ring -->
+        <FrameLayout
+            android:id="@+id/btnIssueContainer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_huge"
+            android:layout_marginTop="@dimen/spacing_medium"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalFare">
+
+            <ProgressBar
+                android:id="@+id/progressHold"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:progressDrawable="@drawable/bg_hold_progress"
+                android:max="100"
+                android:progress="0"
+                android:visibility="invisible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIssue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="HOLD TO ISSUE"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/primary"
+                android:textColor="@color/text_inverse"
+                app:cornerRadius="@dimen/corner_radius_large" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Success Overlay (Hidden by default) -->
+    <FrameLayout
+        android:id="@+id/overlaySuccess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/success"
+        android:visibility="gone"
+        android:elevation="10dp"
+        tools:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@android:drawable/ic_dialog_info"
+                app:tint="@color/text_primary"/>
+            <TextView
+                android:id="@+id/tvSuccessFare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="64sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                tools:text="₹75" />
+            <TextView
+                android:id="@+id/tvSuccessDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/text_primary"
+                tools:text="3 Adults to Silk Board" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

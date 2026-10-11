@@ -1,0 +1,20 @@
+{
+  "routeNumber": "500D",
+  "direction": "Hebbal to Central Silk Board",
+  "stops": [
+    { "id": 1, "nameEn": "Hebbal", "nameLoc": "ಹೆಬ್ಬಾಳ", "stageFare": 0, "latitude": 13.0354, "longitude": 77.5972 },
+    { "id": 2, "nameEn": "Veeranapalya", "nameLoc": "ವೀರನಪಾಳ್ಯ", "stageFare": 5, "latitude": 13.0428, "longitude": 77.6034 },
+    { "id": 3, "nameEn": "Kalyan Nagar", "nameLoc": "ಕಲ್ಯಾಣ ನಗರ", "stageFare": 10, "latitude": 13.0506, "longitude": 77.6401 },
+    { "id": 4, "nameEn": "Banaswadi", "nameLoc": "ಬಾಣಸವಾಡಿ", "stageFare": 15, "latitude": 13.0306, "longitude": 77.6463 },
+    { "id": 5, "nameEn": "Ramamurthy Nagar", "nameLoc": "ರಾಮಮೂರ್ತಿ ನಗರ", "stageFare": 15, "latitude": 13.0176, "longitude": 77.6800 },
+    { "id": 6, "nameEn": "K R Puram", "nameLoc": "ಕೆ ಆರ್ ಪುರಂ", "stageFare": 20, "latitude": 13.0090, "longitude": 77.6886 },
+    { "id": 7, "nameEn": "Mahadevapura", "nameLoc": "ಮಹದೇವಪುರ", "stageFare": 20, "latitude": 12.9983, "longitude": 77.6995 },
+    { "id": 8, "nameEn": "Marathahalli", "nameLoc": "ಮಾರತ್ತಹಳ್ಳಿ", "stageFare": 25, "latitude": 12.9554, "longitude": 77.7013 },
+    { "id": 9, "nameEn": "Kadubeesanahalli", "nameLoc": "ಕಾಡುಬೀಸನಹಳ್ಳಿ", "stageFare": 25, "latitude": 12.9399, "longitude": 77.6852 },
+    { "id": 10, "nameEn": "Bellandur", "nameLoc": "ಬೆಳ್ಳಂದೂರು", "stageFare": 30, "latitude": 12.9261, "longitude": 77.6769 },
+    { "id": 11, "nameEn": "Iblur", "nameLoc": "ಇಬ್ಲೂರ್", "stageFare": 30, "latitude": 12.9162, "longitude": 77.6767 },
+    { "id": 12, "nameEn": "Agara", "nameLoc": "ಅಗರ", "stageFare": 35, "latitude": 12.9078, "longitude": 77.6541 },
+    { "id": 13, "nameEn": "HSR Layout", "nameLoc": "ಎಚ್ಎಸ್ಆರ್ ಲೇಔಟ್", "stageFare": 35, "latitude": 12.9122, "longitude": 77.6475 },
+    { "id": 14, "nameEn": "Central Silk Board", "nameLoc": "ಸೆಂಟ್ರಲ್ ಸಿಲ್ಕ್ ಬೋರ್ಡ್", "stageFare": 40, "latitude": 12.9148, "longitude": 77.6236 }
+  ]
+}
